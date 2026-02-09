@@ -1,0 +1,13 @@
+# Terraform junk
+.terraform/
+.terraform.lock.hcl
+*.tfstate*
+*.tfstate.backup
+.vscode/
+
+# Certification-labs: keep first-ec2.tf, ignore junk
+!Certification-labs/first-ec2.tf
+Certification-labs/.terraform/
+Certification-labs/*.tfstate*
+Certification-labs/.terraform.lock.hcl
+
