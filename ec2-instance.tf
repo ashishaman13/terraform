@@ -1,8 +1,8 @@
 terraform {
   required_providers {
     aws = {
-        source = "harshicorp/aws"
-        #version = "value"
+      source = "harshicorp/aws"
+      #version = "value"
     }
   }
 }
