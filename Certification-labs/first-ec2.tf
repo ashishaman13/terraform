@@ -1,6 +1,6 @@
 provider "aws" {
   region     = "us-east-1"
-  profile = "terraform-user"
+  profile = "tf-user-personal-account"
 }
 
 resource "aws_instance" "myec2" {
