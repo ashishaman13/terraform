@@ -8,6 +8,6 @@ resource "aws_instance" "my_ec2" {
     instance_type = "t2.micro"
     count = 3
     tags = {
-        Name = "order-instance"
+        Name = "order-instance-${count.index}"
     }
 }
