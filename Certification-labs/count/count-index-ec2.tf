@@ -11,3 +11,10 @@ resource "aws_instance" "my_ec2" {
         Name = "order-instance-${count.index}"
     }
 }
+
+# 2nd use-case is IAM user, identical user-name is not allowed, so count-index can solve
+
+resource "aws_iam_user" "This" {
+    name = "read-only-user-${count.index}"
+    count = 2
+}
