@@ -19,7 +19,7 @@ resource "aws_iam_user" "This" {
     count = 2
 }
 
-# 3rd use-case is not every time we want name to be like - "my-ec2-instance-0","my-ec2-instance-1"
+# 3rd use-case is not every time we want name to be like - "read-only-user-0","read-only-user-1"
 
 variable "user_name" {
   type = list
