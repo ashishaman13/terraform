@@ -18,3 +18,16 @@ resource "aws_iam_user" "This" {
     name = "read-only-user-${count.index}"
     count = 2
 }
+
+# 3rd use-case is not every time we want name to be like - "my-ec2-instance-0","my-ec2-instance-1"
+
+variable "user_name" {
+  type = list
+  default = ["DevTeam","TestTeam","ProdTeam"]
+}
+
+resource "aws_iam_user" "this" {
+    count = 3
+    name = var.user_name[count.index]
+  
+}
